@@ -1,0 +1,166 @@
+/* --- Base --- */
+body {
+  background-color: #9a0002;
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Headings --- */
+h1 {
+  color: #efe6de;
+  text-align: center;
+  font-family: drowner; /* swap for your custom font if you have it installed */
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+/* --- Paragraphs --- */
+p {
+  text-align: left; /* center is hard to read for long text */
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: #efe6de;
+  margin-bottom: 14px;
+  max-width: 700px; /* stops lines getting too wide */
+}
+
+/* --- Images --- */
+img {
+  width: 100%; /* fills its container */
+  height: auto;
+  display: block;
+  border: 3px solid #efe6de;
+  border-radius: 4px;
+}
+
+/* --- Links --- */
+a {
+  font-family: drowner;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  color: #efe6de;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* --- Nav --- */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 18px 32px 14px;
+  border-bottom: 2.5px solid #efe6de;
+}
+
+nav a {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* --- Layout Grid --- */
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  flex: 1;
+  gap: 24px;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  border-right: 1px solid rgba(239, 230, 222, 0.25);
+}
+
+/* --- Main Content --- */
+.content {
+  padding: 24px 32px 24px 8px;
+}
+
+/* --- Footer --- */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px 32px;
+  border-top: 2.5px solid #efe6de;
+  margin-top: auto; /* pushes footer to bottom */
+}
+
+footer a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-right: none;
+    border-bottom: 1px solid rgba(239, 230, 222, 0.25);
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 16px;
+  }
+}
+
+.deco {
+  color: #efe6de;
+  font-size: 28px;
+  display: inline-block;
+}
+
+/* make them bounce */
+.deco:hover {
+  animation: bounce 0.4s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+h2{
+     text-align: left; /* center is hard to read for long text */
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: #efe6de;
+  margin-bottom: 14px;
+  max-width: 700px; /* stops lines getting too wide */
+}
