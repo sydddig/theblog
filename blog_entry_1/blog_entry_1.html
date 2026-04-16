@@ -13,22 +13,17 @@
 </head>
 
 <body>
-
+   <nav>
+<img src="../blog_entry_1/img/car.png" class="car" alt="picture of a red f1 car">
   <!-- NAV -->
-  <nav>
-    <a href="/blog_entry_1/blog_entry_1.html">Intro to F1</a>
-    <a href="/blog_entry_2/blog_entry_2.html">Me and F1</a>
-    <a href="/blog_entry_3/blog_entry_3.html">Outro to F1</a>
-    <a href="/index.html">Va vroom!</a>
+ 
+    <a href="../blog_entry_1/blog_entry_1.html">Intro to F1</a>
+    <a href="../blog_entry_2/blog_entry_2.html">Me and F1</a>
+    <a href="../blog_entry_3/blog_entry_3.html">Outro to F1</a>
   </nav>
-
   <!-- LAYOUT -->
   <div class="layout">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <img src="img/IMG_0863.jpg" alt="F1 image">
-    </aside>
 
     <!-- MAIN CONTENT -->
     <main class="content">
@@ -49,14 +44,32 @@
       <p>Whether you stumbled here after watching Drive to Survive on Netflix, caught a highlight reel that made your jaw drop, or just want to understand what all the fuss is about — welcome. You're in the right place.</p>
     </main>
 
+ <aside class="sidebar">
+      <img src="img/IMG_0863.jpg" alt="F1 image">
+    </aside>
+
   </div>
 
   <!-- FOOTER -->
+   <a href="../index.html" class="flag">  <img src="img/preview.png" alt="picture of a black and white flag with checkered patterns on it"> </a>
   <footer>
+    © All rights reserved 2026 Sydni Johnson
     <a href="https://www.youtube.com/watch?v=XwuaIzdR46I&t=224s">Youtube.com</a>
     <a href="https://www.espn.com/f1/">ESPN.com</a>
     <a href="https://www.formula1.com/">F1.com</a>
   </footer>
+ <audio id="click-sound" src="../js/f1_car_sound.mp3"></audio>
 
+<script>
+  document.querySelector('.flag').addEventListener('click', function(e) {
+    e.preventDefault(); // pauses the navigation briefly so sound can play
+    const sound = document.getElementById('click-sound');
+    sound.currentTime = 0;
+    sound.play();
+    setTimeout(() => {
+      window.location.href = this.href;
+    }, 500); // waits 500ms for sound to play before navigating
+  });
+</script>
 </body>
 </html>
